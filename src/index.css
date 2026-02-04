@@ -784,7 +784,19 @@ backdrop-filter: blur(12px);
   text-align: center;
   transition: transform 0.3s ease;
 }
-.bonus-card:hover { transform: translateY(-5px); background: #f0fdfe; }
+/* Fix text visibility when card turns light */
+.bonus-card:hover h3 {
+  color: #f6f7f9;   /* dark readable heading */
+}
+
+.bonus-card:hover p {
+  color: #ffffff;   /* darker paragraph */
+}
+
+.bonus-card:hover .check-icon {
+  color: #0ea5e9;   /* optional accent tweak */
+}
+
 
 .bonus-tag {
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
@@ -833,11 +845,15 @@ backdrop-filter: blur(12px);
   font-weight: 800; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 3px solid #fff;
   z-index: 5;
 }
-/* ===== Slider Container ===== */
+/* ===== Slider Structure ===== */
+
 .cert-slider {
   position: relative;
-  overflow: hidden;
-  border-radius: 16px;
+}
+
+.cert-viewport {
+  overflow: hidden;      /* hides extra certificates */
+  border-radius: 16px;   /* keeps rounded border */
 }
 
 .cert-track {
@@ -850,14 +866,14 @@ backdrop-filter: blur(12px);
   padding: 10px;
 }
 
-/* ===== Translucent Center Arrows ===== */
 /* ===== Small Outside Arrows ===== */
+
 .cert-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 
-  width: 34px;          /* smaller size */
+  width: 34px;
   height: 34px;
   font-size: 16px;
 
@@ -867,31 +883,29 @@ backdrop-filter: blur(12px);
 
   background: rgba(255,255,255,0.35);
   backdrop-filter: blur(6px);
-  color: #ffffff;
+  color: #fff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  transition: 0.25s ease;
   z-index: 20;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
 }
 
-/* Move arrows OUTSIDE certificate */
 .cert-arrow.left {
-  left: -18px;   /* 🔥 push outside */
+  left: -18px;   /* outside border */
 }
 
 .cert-arrow.right {
-  right: -18px;  /* 🔥 push outside */
+  right: -18px;  /* outside border */
 }
 
 .cert-arrow:hover {
-  background: rgba(255,255,255,0.55);
   transform: translateY(-50%) scale(1.08);
+  background: rgba(255,255,255,0.55);
 }
-
-
 
 
 /* Mobile Bonus/Cert */

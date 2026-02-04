@@ -22,7 +22,7 @@ export default function Certificate() {
     <section className="certificate-section">
       <div className="cert-grid">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT SIDE */}
         <div className="cert-content fade-up show">
           <div
             className="badge-pill"
@@ -66,24 +66,29 @@ export default function Certificate() {
           </ul>
         </div>
 
-        {/* RIGHT SIDE — ANIMATED SLIDER */}
+        {/* RIGHT SIDE — SLIDER */}
         <div className="cert-visual fade-up show">
-
           <div className="cert-slider">
-            <div
-              className="cert-track"
-              style={{
-                transform: `translateX(-${index * 100}%)`,
-              }}
-            >
-              {certificates.map((src, i) => (
-                <div className="cert-frame" key={i}>
-                  <img src={src} className="cert-img" alt="ISML Certificate" />
-                </div>
-              ))}
+
+            {/* VIEWPORT hides extra slides */}
+            <div className="cert-viewport">
+              <div
+                className="cert-track"
+                style={{ transform: `translateX(-${index * 100}%)` }}
+              >
+                {certificates.map((src, i) => (
+                  <div className="cert-frame" key={i}>
+                    <img
+                      src={src}
+                      alt="ISML Certificate"
+                      className="cert-img"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* TRANSLUCENT CENTER ARROWS */}
+            {/* OUTSIDE ARROWS */}
             <button className="cert-arrow left" onClick={prevCert}>
               ❮
             </button>
@@ -91,8 +96,8 @@ export default function Certificate() {
             <button className="cert-arrow right" onClick={nextCert}>
               ❯
             </button>
-          </div>
 
+          </div>
         </div>
 
       </div>
