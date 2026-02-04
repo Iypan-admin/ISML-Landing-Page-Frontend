@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Admin.css"; // Ensure you have this file
+import "./Admin.css"; 
 
 export default function Admin() {
   const [password, setPassword] = useState("");
@@ -11,6 +11,7 @@ export default function Admin() {
     // 1. GET URL FROM ENV VARIABLES
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
+    // Safety Check
     if (!BACKEND_URL) {
       alert("CONFIGURATION ERROR: VITE_BACKEND_URL is missing.");
       setLoading(false);
@@ -18,7 +19,7 @@ export default function Admin() {
     }
 
     try {
-      // 👇 FIX IS HERE: Use 'BACKEND_URL', not 'VITE_BACKEND_URL'
+      // ✅ FIXED: Using 'BACKEND_URL' variable correctly here
       const res = await fetch(
         `${BACKEND_URL}/admin/download-registrations`,
         {
