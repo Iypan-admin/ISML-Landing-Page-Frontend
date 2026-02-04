@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Admin.css"; // Ensure you have this file
 
 export default function Admin() {
   const [password, setPassword] = useState("");
@@ -17,8 +18,9 @@ export default function Admin() {
     }
 
     try {
+      // 👇 FIX IS HERE: Use 'BACKEND_URL', not 'VITE_BACKEND_URL'
       const res = await fetch(
-        `${VITE_BACKEND_URL}/admin/download-registrations`,
+        `${BACKEND_URL}/admin/download-registrations`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
