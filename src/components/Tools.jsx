@@ -37,13 +37,13 @@ export default function Tools() {
           className="flag-icon"
         />
       ),
-      desc: "EU Standards",
+      
     },
-    { name: "Speaking", icon: "🗣️", desc: "Fluency" },
-    { name: "Reading", icon: "📖", desc: "Comprehension" },
-    { name: "Writing", icon: "✍️", desc: "Grammar" },
-    { name: "Listening", icon: "🎧", desc: "Audio Training" },
-    { name: "Culture", icon: "🌏", desc: "Etiquette" },
+    { name: "Speaking", icon: "🗣️", },
+    { name: "Reading", icon: "📖",  },
+    { name: "Writing", icon: "✍️",  },
+    { name: "Listening", icon: "🎧",  },
+    { name: "Culture", icon: "🌏", },
   ];
 
   const radius = 250;

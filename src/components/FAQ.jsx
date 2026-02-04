@@ -91,8 +91,12 @@ export default function FAQ() {
           </p>
 
           <div className="support-actions">
-            <a href="tel:+917338881781">
-              <span>📞</span> 733 888 1781
+            <a href="tel:+917338880186">
+              <span>📞</span> 733 888 0186
+            </a>
+
+            <a href="tel:+917338881780">
+              <span>📞</span> 733 888 1780
             </a>
 
             <a href="mailto:enquiry.isml@gmail.com">
