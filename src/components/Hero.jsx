@@ -9,8 +9,10 @@ export default function Hero({ onEnroll }) {
           {/* Date from Circular [cite: 71] */}
           <div className="badge-pill">🚀 New Batch Starts From This Week</div>
           
+          <h2>
+            It is always the right time to <br />
+          </h2>
           <h1>
-            It is always a right time to <br />
             <span className="highlight-text">START LEARNING</span>
           </h1>
 

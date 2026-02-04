@@ -783,9 +783,16 @@ backdrop-filter: blur(12px);
 /* Certificate */
 .certificate-section { padding: 80px 20px; background: transparent; }
 .cert-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-  align-items: center; max-width: 1100px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* content slightly wider */
+  gap: 40px;                         /* reduce gap a little */
+  align-items: center;
+
+  max-width: 1400px;  /* 🔥 increase from 1100px */
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
 .cert-content h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 16px; }
 .cert-subtext { color: var(--text-muted); margin-bottom: 30px; font-size: 1.1rem; }
 .cert-benefits { list-style: none; padding: 0; }
@@ -807,6 +814,61 @@ backdrop-filter: blur(12px);
   font-weight: 800; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 3px solid #fff;
   z-index: 5;
 }
+/* ===== Slider Container ===== */
+.cert-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.cert-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.cert-frame {
+  min-width: 100%;
+  padding: 10px;
+}
+
+/* ===== Translucent Center Arrows ===== */
+.cert-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.cert-arrow:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.cert-arrow.left {
+  left: 10px;
+}
+
+.cert-arrow.right {
+  right: 10px;
+}
+
+
 
 /* Mobile Bonus/Cert */
 @media (max-width: 768px) {
