@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Admin.css"; 
 
 export default function Admin() {
   const [password, setPassword] = useState("");
