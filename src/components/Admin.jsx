@@ -18,7 +18,7 @@ export default function Admin() {
 
     try {
       const res = await fetch(
-        `${BACKEND_URL}/admin/download-registrations`,
+        `${VITE_BACKEND_URL}/admin/download-registrations`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
