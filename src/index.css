@@ -485,6 +485,25 @@ backdrop-filter: blur(12px);
   align-items: center;
   overflow: hidden; 
 }
+/* Container for headers */
+.section-header {
+  margin-bottom: 10px; /* Space between header and content */
+}
+
+/* Alignment Utility */
+.section-header.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional: Styling for the subtitle to make it look distinct */
+.subtitle {
+  color: var(--text-muted); /* Or any secondary color */
+  font-weight: 500;
+  margin-top: 8px; 
+}
 
 .wheel-container {
   position: relative;

@@ -77,7 +77,7 @@ export default function Tools() {
     <section id="languages" className="wheel-section">
       <div className="section-header center">
         <h2>Curriculum & Skills</h2>
-        <p className="subtitle">Interactive Learning Path</p>
+        <h4 className="subtitle">Interactive Learning Path</h4>
       </div>
 
       <div className="wheel-container">
