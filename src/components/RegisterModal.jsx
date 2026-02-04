@@ -75,7 +75,7 @@ export default function RegisterModal({ open, onClose }) {
             profession: formData.profession,
             state: formData.state,
             batch: formData.batch,
-            amount: "1.00" 
+            amount: "1299.00" 
           })
         }
       );
