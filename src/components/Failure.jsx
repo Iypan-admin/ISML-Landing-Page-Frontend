@@ -36,7 +36,7 @@ export default function Failure() {
           <div className="support-block">
             <strong>📞 Call Us</strong>
             <p><a href="tel:+917338881781" className="support-link">733 888 1781</a></p>
-            <p><a href="tel:+917338881780" className="support-link">733 888 1780</a></p>
+            <p><a href="tel:+917338880780" className="support-link">733 888 0780</a></p>
             <p><a href="tel:+917338880186" className="support-link">733 888 0186</a></p>
           </div>
 

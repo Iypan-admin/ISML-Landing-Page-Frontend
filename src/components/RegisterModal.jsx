@@ -196,9 +196,10 @@ export default function RegisterModal({ open, onClose }) {
                 style={errors.batch ? { borderColor: "#ef4444", backgroundColor: "#fef2f2" } : {}}
               >
                 <option value="" disabled>Select Batch...</option>
-                <option value="Weekday">Weekday (Mon / Wed / Fri)(Timing : 7:00 PM to 9:00 PM)</option>
-                <option value="Weekend slot I">Weekend (Sat / Sun)(Timing : 11:00 AM to 1:00 PM)</option>
-                <option value="Weekend slot II">Weekend (Sat / Sun)(Timing : 7:00 PM to 9:00 PM)</option>
+                <option value="Weekday slot 7 to 9">Weekday (Mon / Wed / Fri)(Timing : 7:00 PM to 9:00 PM)</option>
+                <option value="Weekday slot 11 to 1">Weekday (Mon / Wed / Fri)(Timing : 11:00 AM to 1:00 PM)</option>
+                <option value="Weekend slot 11 to 1">Weekend (Sat / Sun)(Timing : 11:00 AM to 1:00 PM)</option>
+                <option value="Weekend slot 7 to 9">Weekend (Sat / Sun)(Timing : 7:00 PM to 9:00 PM)</option>
               </select>
               {errors.batch && <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>{errors.batch}</small>}
             </div>
