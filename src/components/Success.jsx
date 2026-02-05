@@ -20,23 +20,41 @@ export default function Success() {
           <h3>Help & Support</h3>
 
           <p>
-            Need assistance with courses, enrollment, or classes? 
+            Need assistance with courses, enrollment, or classes?
             We’re happy to help.
           </p>
 
           <div className="support-block">
             <strong>📧 Email Support</strong>
-            <p>enquiry.isml@gmail.com</p>
+            <p>
+              <a href="mailto:enquiry.isml@gmail.com" className="support-link">
+                enquiry.isml@gmail.com
+              </a>
+            </p>
           </div>
 
           <div className="support-block">
             <strong>📞 Call Us</strong>
-            <p>733 888 1781</p>
-            <p>733 888 1780</p>
-            <p>733 888 0186</p>
+            <p><a href="tel:+917338881781" className="support-link">733 888 1781</a></p>
+            <p><a href="tel:+917338881780" className="support-link">733 888 1780</a></p>
+            <p><a href="tel:+917338880186" className="support-link">733 888 0186</a></p>
+          </div>
+
+          {/* ⭐ Refund Policy */}
+          <div className="support-block">
+            <strong>Refund & Cancellation</strong>
+            <p>
+              <a
+                href="https://www.indianschoolformodernlanguages.com/refund"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="support-link"
+              >
+                View Refund / Cancellation Policy
+              </a>
+            </p>
           </div>
         </div>
-
       </div>
     </div>
   );
