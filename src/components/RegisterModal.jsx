@@ -171,7 +171,24 @@ export default function RegisterModal({ open, onClose }) {
             {errors.batch && <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>{errors.batch}</small>}
           </div>
           <button type="submit" className="submit-btn pulse-btn">Proceed to Payment (₹1299)</button>
-          <p className="privacy-note">Your data is safe with ISML.</p>
+          <p className="privacy-note">
+              By proceeding, you agree to our{" "}
+              <a 
+                href="https://www.indianschoolformodernlanguages.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a 
+                href="https://www.indianschoolformodernlanguages.com/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms & Conditions
+              </a>.
+            </p>
         </form>
       </div>
     </div>
