@@ -178,7 +178,6 @@ export default function RegisterModal({ open, onClose }) {
                 <option value="" disabled>Select Language...</option>
                 <option value="French">French</option>
                 <option value="German">German</option>
-                <option value="Japanese">Japanese</option>
               </select>
               {errors.language && (
                 <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>
