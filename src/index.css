@@ -1108,13 +1108,18 @@ backdrop-filter: blur(12px);
 }
 .modal-box {
   background: rgba(255,255,255,0.06);
-backdrop-filter: blur(12px);
- width: 90%; max-width: 480px; padding: 32px;
+  backdrop-filter: blur(12px);
+  width: 90%; max-width: 480px; padding: 32px;
   border-radius: 20px; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,0.4);
   animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;   /* 🔥 prevents modal from becoming huge */
+  display: flex;
+  flex-direction: column;
 }
 .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 2rem; color: #94a3b8; cursor: pointer; }
-.register-form { display: flex; flex-direction: column; gap: 16px; }
+.register-form { display: flex; flex-direction: column; gap: 16px; overflow-y: auto;
+  max-height: 60vh;   /* adjust if needed */
+  padding-right: 6px;}
 .register-form label { font-size: 0.9rem; font-weight: 700; color: var(--text-main); margin-bottom: -8px; margin-left: 4px; }
 .register-form input, .register-form select {
   padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; background: #f8fafc; width: 100%;
@@ -1131,6 +1136,13 @@ backdrop-filter: blur(12px);
 }
 .privacy-note { text-align: center; font-size: 0.8rem; color: #94a3b8; margin-top: 8px; }
 
+.register-form::-webkit-scrollbar {
+  width: 6px;
+}
+.register-form::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
 .privacy-note a {
   color: #ffffff;
   font-weight: 600;
