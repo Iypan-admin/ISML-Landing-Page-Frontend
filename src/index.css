@@ -1479,3 +1479,18 @@ p,span,li {
   background-color: #93c5fd;
   cursor: not-allowed;
 }
+
+.support-link {
+  color: #0054a6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+.admin-error {
+  color: #ef4444;
+  margin-bottom: 15px;
+}
