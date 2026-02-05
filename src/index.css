@@ -434,7 +434,7 @@ backdrop-filter: blur(12px);
   .mentor-grid { grid-template-columns: 1fr; gap: 30px; padding: 25px; text-align: center; }
   .mentor-image-wrapper {
   width: 100%;
-  height: 350px;
+  height: 100%;
   border-radius: 22px;
   overflow: hidden;
   position: relative;
@@ -457,10 +457,10 @@ backdrop-filter: blur(12px);
     inset 0 0 60px rgba(0,160,255,0.1);
     
 }
-
 .mentor-image-wrapper img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
   .mentor-title { font-size: 0.85rem; }
   .mentor-name { font-size: 1.8rem; }
