@@ -7,7 +7,8 @@ export default function RegisterModal({ open, onClose }) {
     phone: "",
     profession: "",
     state: "",
-    batch: "" 
+    batch: "",
+    language: "" 
   });
 
   const [errors, setErrors] = useState({});
@@ -44,6 +45,10 @@ export default function RegisterModal({ open, onClose }) {
     if (!formData.profession) { newErrors.profession = "Select a profession"; isValid = false; }
     if (!formData.state) { newErrors.state = "Select your state"; isValid = false; }
     if (!formData.batch) { newErrors.batch = "Select a batch"; isValid = false; }
+    if (!formData.language) { 
+      newErrors.language = "Select a language"; 
+      isValid = false; 
+    }
     setErrors(newErrors);
     return isValid;
   };
@@ -75,6 +80,7 @@ export default function RegisterModal({ open, onClose }) {
             profession: formData.profession,
             state: formData.state,
             batch: formData.batch,
+            language: formData.language,
             amount: "1299.00" 
           })
         }
@@ -160,16 +166,44 @@ export default function RegisterModal({ open, onClose }) {
               {errors.state && <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>{errors.state}</small>}
             </div>
           </div>
-          <div className="form-group-full" style={{marginTop: '16px'}}>
-            <label>Preferred Batch</label>
-            <select name="batch" value={formData.batch} onChange={handleChange} style={errors.batch ? { borderColor: "#ef4444", backgroundColor: "#fef2f2" } : {}}>
-              <option value="" disabled>Select Batch...</option>
-              <option value="Weekday">Weekday (Mon / Wed / Fri)(Timing : 7:00 PM to 9:00 PM)</option>
-              <option value="Weekend slot I">Weekend (Sat / Sun)(Timing : 11:00 AM to 1:00 PM)</option>
-              <option value="Weekend slot II">Weekend (Sat / Sun)(Timing : 7:00 PM to 9:00 PM)</option>
-            </select>
-            {errors.batch && <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>{errors.batch}</small>}
-          </div>
+          {/* ⭐ Preferred Language */}
+            <div className="form-group-full" style={{marginTop: '16px'}}>
+              <label>Preferred Language</label>
+              <select
+                name="language"
+                value={formData.language}
+                onChange={handleChange}
+                style={errors.language ? { borderColor: "#ef4444", backgroundColor: "#fef2f2" } : {}}
+              >
+                <option value="" disabled>Select Language...</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Japanese">Japanese</option>
+              </select>
+              {errors.language && (
+                <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>
+                  {errors.language}
+                </small>
+              )}
+            </div>
+
+            {/* ⭐ Preferred Batch */}
+            <div className="form-group-full" style={{marginTop: '16px'}}>
+              <label>Preferred Batch</label>
+              <select
+                name="batch"
+                value={formData.batch}
+                onChange={handleChange}
+                style={errors.batch ? { borderColor: "#ef4444", backgroundColor: "#fef2f2" } : {}}
+              >
+                <option value="" disabled>Select Batch...</option>
+                <option value="Weekday">Weekday (Mon / Wed / Fri)(Timing : 7:00 PM to 9:00 PM)</option>
+                <option value="Weekend slot I">Weekend (Sat / Sun)(Timing : 11:00 AM to 1:00 PM)</option>
+                <option value="Weekend slot II">Weekend (Sat / Sun)(Timing : 7:00 PM to 9:00 PM)</option>
+              </select>
+              {errors.batch && <small style={{ color: "#ef4444", fontSize: "0.75rem" }}>{errors.batch}</small>}
+            </div>
+
           <button type="submit" className="submit-btn pulse-btn">Proceed to Payment (₹1299)</button>
           <p className="privacy-note">
               By proceeding, you agree to our{" "}
