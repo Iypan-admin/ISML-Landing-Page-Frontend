@@ -1507,3 +1507,12 @@ p,span,li {
   color: #ef4444;
   margin-bottom: 15px;
 }
+
+.status-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

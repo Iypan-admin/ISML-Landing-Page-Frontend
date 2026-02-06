@@ -6,6 +6,13 @@ export default function Failure() {
     <div className="status-page failure">
       <div className="status-card">
 
+
+       {/* ⭐ LOGO HERE */}
+        <img
+          src="/logo.png"
+          alt="ISML Logo"
+          className="status-logo"
+        />
         <h1>❌ Payment Failed</h1>
 
         <p>Your payment could not be completed.</p>

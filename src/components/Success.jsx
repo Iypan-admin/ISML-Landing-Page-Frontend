@@ -6,6 +6,13 @@ export default function Success() {
     <div className="status-page success">
       <div className="status-card">
 
+              {/* ⭐ LOGO HERE */}
+        <img
+          src="/logo.png"
+          alt="ISML Logo"
+          className="status-logo"
+        />
+
         <h1>✅ Payment Successful</h1>
 
         <p>Your registration for the ISML Foundation Program is confirmed.</p>

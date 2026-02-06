@@ -1,43 +1,51 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <link rel="icon" type="image/png" href="/logo.png" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0054a6" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>ISML Foundation | Master French, German & Japanese</title>
-    <meta name="description" content="Join the ISML Foundation Program. A beginner-friendly course to master the basics of French, German, and Japanese. Build confidence and crack tech interviews." />
-    <meta name="keywords" content="Language Learning, French, German, Japanese, ISML, Career Growth, Speaking Skills" />
-    <meta name="author" content="Indian School for Modern Languages" />
+  <link rel="icon" type="image/png" href="/logo.png" />
 
-    <meta property="og:title" content="Launch Your Global Career with ISML" />
-    <meta property="og:description" content="Join 10,000+ learners. Master 3 languages in 4 weeks. Register now for the Foundation Batch." />
-    
-    <meta property="og:image" content="/video-thumbnail.jpg" />
-    <meta property="og:url" content="https://foundation.indianschoolformodernlanguages.com/" />
-    <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0054a6" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ISML Foundation Program">
-    <meta name="twitter:description" content="Master the basics of French, German, and Japanese in 4 weeks.">
-    <meta name="twitter:image" content="/video-thumbnail.jpg">
+  <!-- 🔥 PRELOAD LCP HERO THUMBNAIL (BIGGEST FIX) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/video-thumbnail.jpg"
+    fetchpriority="high"
+  />
 
-        <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCLDS4XNHN"></script>
-    <script>
+  <title>ISML Foundation | Master French, German & Japanese</title>
+
+  <meta name="description" content="Join the ISML Foundation Program. A beginner-friendly course to master the basics of French, German, and Japanese. Build confidence and crack tech interviews." />
+  <meta name="keywords" content="Language Learning, French, German, Japanese, ISML, Career Growth, Speaking Skills" />
+  <meta name="author" content="Indian School for Modern Languages" />
+
+  <meta property="og:title" content="Launch Your Global Career with ISML" />
+  <meta property="og:description" content="Join 10,000+ learners. Master 3 languages in 4 weeks. Register now for the Foundation Batch." />
+  <meta property="og:image" content="/video-thumbnail.jpg" />
+  <meta property="og:url" content="https://foundation.indianschoolformodernlanguages.com/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ISML Foundation Program">
+  <meta name="twitter:description" content="Master the basics of French, German, and Japanese in 4 weeks.">
+  <meta name="twitter:image" content="/video-thumbnail.jpg">
+
+  <!-- ⚡ DELAYED GOOGLE ANALYTICS (Prevents Main Thread Blocking) -->
+  <script>
+    window.addEventListener("load", function () {
+      var s = document.createElement("script");
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-YCLDS4XNHN";
+      s.async = true;
+      document.head.appendChild(s);
+
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.gtag = gtag;
 
+      gtag('js', new Date());
       gtag('config', 'G-YCLDS4XNHN');
-    </script>
-    <!-- End Google Analytics -->
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+    });
+  </script>
+
+</head>
