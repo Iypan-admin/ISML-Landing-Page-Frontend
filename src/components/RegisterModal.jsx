@@ -68,6 +68,17 @@ export default function RegisterModal({ open, onClose }) {
     }
 
     try {
+
+          // ⭐ Meta Pixel - InitiateCheckout
+      if (window.fbq) {
+        window.fbq('track', 'InitiateCheckout', {
+          value: 1299,
+          currency: 'INR'
+        });
+      }
+
+
+
       const res = await fetch(
         `${BACKEND_URL}/create-payment`, 
         {

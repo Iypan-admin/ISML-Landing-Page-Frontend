@@ -1,7 +1,18 @@
-import React from "react";
 import "./../index.css";
+import React, { useEffect } from "react";
+
 
 export default function Success() {
+  useEffect(() => {
+    // ⭐ Meta Pixel - Purchase
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 1299,
+        currency: 'INR'
+      });
+    }
+  }, []);
+
   return (
     <div className="status-page success">
       <div className="status-card">
