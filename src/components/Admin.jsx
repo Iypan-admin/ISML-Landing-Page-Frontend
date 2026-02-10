@@ -230,12 +230,13 @@ export default function Admin() {
         </button>
 
         {stats && (
-          <div style={{ marginTop: "10px" }}>
-            <p>Initiated: {stats.initiated}</p>
-            <p>Success: {stats.success}</p>
-            <p>Revenue: ₹{stats.revenue || 0}</p>
-          </div>
-        )}
+        <div style={{ marginTop: "10px" }}>
+          <p>Initiated: {stats.initiated}</p>
+          <p>Success: {stats.success}</p>
+          <p>Failed: {stats.failed}</p>
+          <p>Revenue: ₹{stats.revenue || 0}</p>
+        </div>
+      )}
 
       </div>
     </div>
