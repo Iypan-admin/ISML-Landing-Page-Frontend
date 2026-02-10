@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function RegisterModal({ open, onClose }) {
   const [formData, setFormData] = useState({
@@ -13,6 +13,18 @@ export default function RegisterModal({ open, onClose }) {
 
   const [errors, setErrors] = useState({});
 
+  useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get("ref");
+
+  if (ref) {
+    localStorage.setItem("referral", ref);
+    console.log("Referral captured:", ref);
+  }
+}, []);
+
+if (!open) return null;
+
   const indianStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
     "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
@@ -23,7 +35,7 @@ export default function RegisterModal({ open, onClose }) {
     "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
   ];
 
-  if (!open) return null;
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -57,6 +69,10 @@ export default function RegisterModal({ open, onClose }) {
     e.preventDefault();
     if (!validateForm()) return; 
 
+    const referral = localStorage.getItem("referral");
+    console.log("Sending referral to backend:", referral);
+
+
     // 👇 STRICT: Reads only from environment variables
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -85,15 +101,16 @@ export default function RegisterModal({ open, onClose }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            profession: formData.profession,
-            state: formData.state,
-            batch: formData.batch,
-            language: formData.language,
-            amount: "1299.00" 
-          })
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          profession: formData.profession,
+          state: formData.state,
+          batch: formData.batch,
+          language: formData.language,
+          amount: "1299.00",
+          referral
+        })
         }
       );
 
