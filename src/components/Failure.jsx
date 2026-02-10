@@ -18,9 +18,14 @@ export default function Failure() {
         <p>Your payment could not be completed.</p>
         <p>Please try again or contact support.</p>
 
-        <a href="/" className="status-btn">
-          Try Again
-        </a>
+       <a
+        href={localStorage.getItem("referral")
+          ? `/?ref=${localStorage.getItem("referral")}`
+          : "/"}
+        className="status-btn"
+      >
+        Try Again
+      </a>
 
                 {/* ===== SUPPORT SECTION ===== */}
         <div className="status-support">

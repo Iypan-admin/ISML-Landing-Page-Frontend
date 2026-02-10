@@ -29,7 +29,12 @@ export default function Success() {
         <p>Your registration for the ISML Foundation Program is confirmed.</p>
         <p>We’ll contact you shortly with further details.</p>
 
-        <a href="/" className="status-btn">
+        <a
+          href={localStorage.getItem("referral")
+            ? `/?ref=${localStorage.getItem("referral")}`
+            : "/"}
+          className="status-btn"
+        >
           Go Back to Home
         </a>
 
