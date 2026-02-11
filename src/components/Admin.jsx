@@ -64,6 +64,47 @@ export default function Admin() {
 
     setLoading(false);
   };
+ 
+/* ---------------------------------------
+    DOWNLOAD INFLUENCERS CSV  
+  --------------------------------------- */
+
+const downloadInfluencers = async () => {
+
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+  try {
+
+    const res = await fetch(
+      `${BACKEND_URL}/admin/download-influencers`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password })
+      }
+    );
+
+    if (!res.ok) {
+      alert("Wrong password or Server Error");
+      return;
+    }
+
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "ISML_Influencers.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+  } catch (err) {
+    console.error(err);
+    alert("Download failed");
+  }
+};
+
 
   /* ---------------------------------------
      CREATE INFLUENCER LINK
@@ -170,6 +211,14 @@ export default function Admin() {
         >
           {loading ? "Downloading..." : "Download Registrations"}
         </button>
+
+        <button
+        onClick={downloadInfluencers}
+        className="admin-button"
+      >
+        Download Influencers
+      </button>
+
 
         <hr style={{ margin: "20px 0" }} />
 
