@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from "react";
-import ismlLogo from "../assets/isml-logo.png"; // ⭐ IMPORT YOUR LOGO
 
 export default function Tools() {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -84,7 +83,7 @@ export default function Tools() {
         {/* ⭐ CENTER HUB WITH ISML LOGO */}
         <div className="wheel-hub" onClick={handleHubClick}>
           <img
-            src={ismlLogo}
+            src="/logo.png" 
             alt="ISML Logo"
             className="hub-logo"
           />
