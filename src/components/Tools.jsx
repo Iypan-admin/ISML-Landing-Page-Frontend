@@ -82,11 +82,7 @@ export default function Tools() {
       <div className="wheel-container">
         {/* ⭐ CENTER HUB WITH ISML LOGO */}
         <div className="wheel-hub" onClick={handleHubClick}>
-          <img
-            src="/logo.png" 
-            alt="ISML Logo"
-            className="hub-logo"
-          />
+          <img src="/logo.webp" alt="ISML Logo" className="hub-logo" width="111" height="111" />
         </div>
 
         {/* SPINNING ORBIT */}

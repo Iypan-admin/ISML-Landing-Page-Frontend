@@ -9,7 +9,7 @@ export default function Navbar({ onEnroll }) {
     <nav className="navbar">
       {/* Clickable Logo Area */}
       <div className="nav-logo" onClick={() => scrollTo("hero")}>
-        <img src="/logo.png" alt="ISML Logo" className="logo-img" />
+        <img src="/logo.webp" alt="ISML Logo" className="logo-img" width="111" height="111" />
         {/* Optional text if logo image fails or for SEO */}
         <span className="logo-text">ISML <span style={{color: "var(--accent)"}}>FOUNDATION</span></span>
       </div>

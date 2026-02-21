@@ -19,7 +19,7 @@ export default function Mentor({ onEnroll }) {
         {/* LEFT: Photo & Badge */}
         <div className="mentor-profile-card fade-up show">
           <div className="mentor-image-wrapper">
-            <img src="/mentor.png" alt="Pradeep Kumar M - ISML Founder" />
+            <img src="/mentor.webp" width="358" height="403" alt="Pradeep Kumar M - ISML Founder" />
           </div>
           <div className="mentor-badges">
             <span className="badge-exp">🏆 12+ Years Exp</span>

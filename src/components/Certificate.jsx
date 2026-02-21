@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export default function Certificate() {
-  const certificates = [
-    "/certificate-sample.png",
-    "/certificate-sample-2.png",
+    const certificates = [
+    "/certificate-sample.webp",
+    "/certificate-sample-2.webp",
   ];
 
   const [index, setIndex] = useState(0);
@@ -78,11 +78,7 @@ export default function Certificate() {
               >
                 {certificates.map((src, i) => (
                   <div className="cert-frame" key={i}>
-                    <img
-                      src={src}
-                      alt="ISML Certificate"
-                      className="cert-img"
-                    />
+                    <img src={src} alt="ISML Certificate" className="cert-img" />
                   </div>
                 ))}
               </div>

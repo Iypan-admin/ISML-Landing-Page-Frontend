@@ -38,11 +38,7 @@ export default function Hero({ onEnroll }) {
         <div className="hero-visual fade-up show">
           <div className="video-decoration"></div> 
           <div className="video-wrapper-hero">
-            <video
-              controls
-              poster="/video-thumbnail.jpg"
-              className="hero-video"
-            >
+            <video controls poster="/video-thumbnail.webp" className="hero-video" preload="none">
               <source src="/intro.mp4" type="video/mp4" />
             </video>
           </div>

@@ -8,11 +8,7 @@ export default function Failure() {
 
 
        {/* ⭐ LOGO HERE */}
-        <img
-          src="/logo.png"
-          alt="ISML Logo"
-          className="status-logo"
-        />
+        <img src="/logo.webp" alt="ISML Logo" className="status-logo" width="111" height="111" />
         <h1>❌ Payment Failed</h1>
 
         <p>Your payment could not be completed.</p>
