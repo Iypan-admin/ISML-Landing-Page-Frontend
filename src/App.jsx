@@ -27,9 +27,9 @@ function LandingPage() {
       <Navbar onEnroll={() => setOpenRegister(true)} />
       <main>
         <Hero onEnroll={() => setOpenRegister(true)} />
+        <Stats />
         <Mentor onEnroll={() => setOpenRegister(true)} />
         <Trust />
-        <Stats />
         <Tools />
         <Bonuses />
         <Certificate />

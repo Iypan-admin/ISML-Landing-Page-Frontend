@@ -27,6 +27,9 @@ export default function Hero({ onEnroll }) {
             <button onClick={onEnroll} className="btn-primary pulse-btn">
               Join Foundation Program – ₹1299
             </button>
+            <p className="urgency-micro">
+              ⚡ 47 students enrolled this week · Only a few seats left
+            </p>
             <div className="trust-mini">
               <span className="stars">⭐⭐⭐⭐⭐</span>
               <span className="trust-text">Rated 4.9 by 20,000+ Learners</span>
@@ -38,7 +41,16 @@ export default function Hero({ onEnroll }) {
         <div className="hero-visual fade-up show">
           <div className="video-decoration"></div> 
           <div className="video-wrapper-hero">
-            <video controls poster="/video-thumbnail.webp" className="hero-video" preload="none">
+            <video
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/video-thumbnail.webp"
+              className="hero-video"
+              preload="metadata"
+            >
               <source src="/intro.mp4" type="video/mp4" />
             </video>
           </div>
