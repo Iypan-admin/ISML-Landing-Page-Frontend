@@ -33,19 +33,19 @@ export default function FooterCTA({ onEnroll }) {
           </div>
 
           <div className="footer-social">
-            <a href="https://www.instagram.com/learnwithisml?igsh=MWx2ZmltM3hlajR0ZA==" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/learnwithisml?igsh=MWx2ZmltM3hlajR0ZA==" target="_blank" rel="noopener noreferrer" aria-label="Follow ISML on Instagram">
               <FaInstagram />
             </a>
 
-            <a href="https://www.linkedin.com/company/learnwithisml/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/learnwithisml/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="Follow ISML on LinkedIn">
               <FaLinkedinIn />
             </a>
 
-            <a href="https://x.com/learnwithisml" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/learnwithisml" target="_blank" rel="noopener noreferrer" aria-label="Follow ISML on X (Twitter)">
               <FaTwitter />
             </a>
 
-            <a href="https://www.youtube.com/@learnwithisml" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@learnwithisml" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to ISML on YouTube">
               <FaYoutube />
             </a>
           </div>

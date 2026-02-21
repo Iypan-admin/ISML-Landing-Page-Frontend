@@ -78,7 +78,7 @@ export default function Certificate() {
               >
                 {certificates.map((src, i) => (
                   <div className="cert-frame" key={i}>
-                    <img src={src} alt="ISML Certificate" className="cert-img" />
+                    <img src={src} alt="ISML Certificate" className="cert-img"  />
                   </div>
                 ))}
               </div>

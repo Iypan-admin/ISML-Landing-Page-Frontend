@@ -25,21 +25,22 @@ function LandingPage() {
   return (
     <>
       <Navbar onEnroll={() => setOpenRegister(true)} />
-      <Hero onEnroll={() => setOpenRegister(true)} />
-      <Mentor onEnroll={() => setOpenRegister(true)} />
-      <Trust />
-      <Stats />
-      <Tools />
-      <Bonuses />
-      <Certificate />
-      <FAQ />
-      <FooterCTA onEnroll={() => setOpenRegister(true)} />
+      <main>
+        <Hero onEnroll={() => setOpenRegister(true)} />
+        <Mentor onEnroll={() => setOpenRegister(true)} />
+        <Trust />
+        <Stats />
+        <Tools />
+        <Bonuses />
+        <Certificate />
+        <FAQ />
+        <FooterCTA onEnroll={() => setOpenRegister(true)} />
+      </main>
 
       <RegisterModal
         open={openRegister}
         onClose={() => setOpenRegister(false)}
       />
-
       <StickyCTA onEnroll={() => setOpenRegister(true)} />
     </>
   );
