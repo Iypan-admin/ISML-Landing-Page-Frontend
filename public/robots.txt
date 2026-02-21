@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foundation.indianschoolformodernlanguages.com/sitemap.xml
