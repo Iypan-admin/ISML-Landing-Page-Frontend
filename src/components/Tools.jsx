@@ -9,7 +9,7 @@ export default function Tools() {
       name: "French",
       icon: (
         <img
-          src="/flags/fr.svg"
+          src="/fr.svg"
           alt="FR"
           className="flag-icon"
         />
@@ -20,7 +20,7 @@ export default function Tools() {
       name: "German",
       icon: (
         <img
-          src="/flags/de.svg"
+          src="/de.svg"
           alt="DE"
           className="flag-icon"
         />
@@ -31,7 +31,7 @@ export default function Tools() {
       name: "CEFR",
       icon: (
         <img
-          src="/flags/eu.svg"
+          src="/eu.svg"
           alt="EU"
           className="flag-icon"
         />
