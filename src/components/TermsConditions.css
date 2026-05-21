@@ -1,0 +1,217 @@
+.terms-conditions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #2D3748;
+  padding-bottom: 5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.terms-header-bg {
+  background: linear-gradient(135deg, #1A237E 0%, #0D47A1 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 10px 30px rgba(26, 35, 126, 0.2);
+}
+
+.terms-header-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.effective-date {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.terms-conditions-main-content {
+  display: flex;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+
+.terms-conditions-sidebar {
+  flex: 0 0 280px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-inner h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.terms-conditions-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.terms-conditions-sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.terms-conditions-sidebar li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #4A5568;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.terms-conditions-sidebar li:hover a {
+  color: #1A237E;
+  background: rgba(26, 35, 126, 0.05);
+  transform: translateX(5px);
+}
+
+.terms-conditions-sidebar li.active a {
+  color: #1A237E;
+  background: rgba(26, 35, 126, 0.1);
+  font-weight: 700;
+}
+
+.terms-conditions-content {
+  flex: 1;
+}
+
+.terms-conditions-content section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.terms-conditions-content h2 {
+  font-size: 2.2rem;
+  color: #1A237E;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.terms-conditions-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: #1A237E;
+  border-radius: 2px;
+}
+
+.terms-conditions-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #4A5568;
+}
+
+.terms-conditions-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.terms-conditions-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  color: #4A5568;
+}
+
+.terms-conditions-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #1A237E;
+  font-weight: bold;
+}
+
+.refund-card {
+  background: #FFF5F5;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #FED7D7;
+  margin-top: 1rem;
+}
+
+.refund-card p strong {
+  color: #C53030;
+  font-size: 1.2rem;
+}
+
+.contact-info-block {
+  background: #F7FAFC;
+  padding: 2rem;
+  border-radius: 20px;
+  border-left: 6px solid #1A237E;
+  margin-top: 2rem;
+}
+
+.contact-info-block p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-block a {
+  color: #1A237E;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .terms-conditions-main-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .terms-conditions-sidebar {
+    position: relative;
+    top: 0;
+    flex: none;
+    width: 100%;
+  }
+
+  .terms-header-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .terms-header-bg {
+    padding: 4rem 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .terms-conditions-content h2 {
+    font-size: 1.8rem;
+  }
+}
