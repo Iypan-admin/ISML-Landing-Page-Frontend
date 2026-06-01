@@ -432,7 +432,7 @@ function AboutUs() {
           </button>
           <div className={`team-members-grid ${openTeamSection === 'trainer-team' ? 'open' : ''}`}>
             {[
-              { name: "Pradeep kumar M", title: "French Language Trainer", image: a1 },
+              { name: "Pradeep kumar M", title: "Founder", image: a1 },
               { name: "Sujal Singh", title: "German Language Trainer", image: t3 },
               { name: "Claude Niyonkuru", title: "French Language Trainer", image: t6 },
               { name: "Bhumika jain", title: "Japanese Language Trainer", image: t8 },
