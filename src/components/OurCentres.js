@@ -307,7 +307,7 @@ function OurCentres() {
               setSelected(null);
             }}
           >
-            Active Centers
+            Hybrid Centres
           </button>
           <button 
             className={`centres-nav-btn ${filter === 'inactive' ? 'inactive-tab' : ''}`}
@@ -316,7 +316,7 @@ function OurCentres() {
               setSelected(null);
             }}
           >
-            Inactive Centers
+            Online Centres
           </button>
         </div>
       </div>

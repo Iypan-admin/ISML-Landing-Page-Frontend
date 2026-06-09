@@ -47,6 +47,27 @@ const Hero = forwardRef(({ heroOutOfView }, ref) => {
           <span className="hero-plain-isml">L</span>
           <span className="hero-gradient-text">ANGUAGES</span>
         </div>
+        <div className="hero-stats-container">
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">10+</span>
+            <span className="hero-stat-label">Centres</span>
+          </div>
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">20,000+</span>
+            <span className="hero-stat-label">Students</span>
+          </div>
+          <div className="hero-languages">
+            <span className="hero-lang-badge">French</span>
+            <span className="hero-lang-badge">German</span>
+            <span className="hero-lang-badge">Japanese</span>
+            <div className="hero-more-languages">
+              More Languages
+              <div className="hero-more-dropdown">
+                <div className="hero-more-dropdown-item">Spanish</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
