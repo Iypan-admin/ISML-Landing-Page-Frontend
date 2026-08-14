@@ -66,6 +66,7 @@ import a4 from '../assets/admin/a4.png';
 import a5 from '../assets/admin/a5.png';
 import a6 from '../assets/admin/a6.png';
 import a7 from '../assets/admin/a7.png';
+import a9 from '../assets/admin/a9.png';
 
 
 
@@ -507,6 +508,14 @@ function AboutUs() {
               </div>
               <h4 className="team-member-name">Purima</h4>
               <p className="team-member-title">Admin Executive</p>
+            </div>
+            <div className="team-member-card">
+              <div className="team-card-bg"></div>
+              <div className="team-member-image-container">
+                <img src={a9} alt="Madhan raj - Business development" className="team-member-image" />
+              </div>
+              <h4 className="team-member-name">Madhan raj</h4>
+              <p className="team-member-title">Business development</p>
             </div>
           </div>
         </div>
