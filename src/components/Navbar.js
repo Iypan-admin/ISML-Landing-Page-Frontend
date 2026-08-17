@@ -153,6 +153,9 @@ function Navbar({ showHeroTextInNav }) {
           <li className="nav-item">
             <Link to="/courses" className="nav-link" onClick={handleNavClick}>Course Details</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/franchise" className="nav-link" onClick={handleNavClick}>Franchise</Link>
+          </li>
           <li className="nav-item dropdown" ref={dropdownRef}>
             <a
               href="#more"
@@ -174,8 +177,7 @@ function Navbar({ showHeroTextInNav }) {
                     <li><Link to="/japanese" onClick={handleNavClick}>Japanese</Link></li>
                   </ul>
                 </li>
-                <li><Link to="/elite-card" onClick={handleNavClick}>Elite Membership</Link></li>
-                <li><Link to="/franchise" onClick={handleNavClick}>Franchise</Link></li>
+                {/* <li><Link to="/elite-card" onClick={handleNavClick}>Elite Membership</Link></li> */}
                 <li><Link to="/contact" onClick={handleNavClick}>Contact Us</Link></li>
                 <li><Link to="/privacy" onClick={handleNavClick}>Privacy Policy</Link></li>
               </ul>
@@ -216,6 +218,9 @@ function Navbar({ showHeroTextInNav }) {
               <Link to="/courses" className="nav-link" onClick={handleNavClick}>Course Details</Link>
             </li>
             <li className="nav-item">
+              <Link to="/franchise" className="nav-link" onClick={handleNavClick}>Franchise</Link>
+            </li>
+            <li className="nav-item">
               <button
                 className="nav-link languages-toggle"
                 onClick={handleLanguagesToggle}
@@ -236,8 +241,7 @@ function Navbar({ showHeroTextInNav }) {
                 More <span className={`arrow ${isMoreOpen ? 'up' : 'down'}`}>▼</span>
               </button>
               <div className={`languages-dropdown ${isMoreOpen ? 'open' : ''}`}>
-                <Link to="/elite-card" className="nav-link" onClick={handleNavClick}>Elite Membership</Link>
-                <Link to="/franchise" className="nav-link" onClick={handleNavClick}>Franchise</Link>
+                {/* <Link to="/elite-card" className="nav-link" onClick={handleNavClick}>Elite Membership</Link> */}
                 <Link to="/contact" className="nav-link" onClick={handleNavClick}>Contact Us</Link>
                 <Link to="/privacy" className="nav-link" onClick={handleNavClick}>Privacy Policy</Link>
               </div>

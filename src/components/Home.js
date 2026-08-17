@@ -6,6 +6,7 @@ import LanguagesOffered from './LanguagesOffered';
 import FAQ from './FAQ';
 import LanguagePhysicsCanvas from './LanguagePhysicsCanvas';
 import ScrambleText from './ScrambleText';
+import Testimonials from './Testimonials';
 
 function Home({ heroRef, heroOutOfView }) {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ function Home({ heroRef, heroOutOfView }) {
       </div>
       <LanguagesOffered />
       <LanguagePhysicsCanvas />
+      <Testimonials />
       <FAQ />
     </div>
   );
