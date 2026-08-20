@@ -2,4 +2,4 @@
 cmds = ["npm install", "CI=false npm run build"]
 
 [start]
-cmd = "npx serve -s build -l 8080"
+cmd = "npx serve -s build -l $PORT"
