@@ -1,8 +1,8 @@
-/* Franchise Page - Mobile First Modern System Layout */
+/* Franchise Page - Mobile First Mild Colorful System Layout */
 .franchise-page-wrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
   font-family: 'Manrope', sans-serif;
   color: #1e293b;
   padding-top: 72px; /* Navbar height offset */
@@ -27,12 +27,18 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #0288d1;
-  background: rgba(2, 136, 209, 0.08);
-  padding: 0.3rem 0.9rem;
+  padding: 0.35rem 1rem;
   border-radius: 20px;
   margin-bottom: 0.6rem;
 }
+
+.tag-blue { color: #0288d1; background: #e0f2fe; }
+.tag-purple { color: #7c3aed; background: #ede9fe; }
+.tag-teal { color: #0d9488; background: #ccfbf1; }
+.tag-indigo { color: #4338ca; background: #e0e7ff; }
+.tag-emerald { color: #047857; background: #d1fae5; }
+.tag-orange { color: #ea580c; background: #ffedd5; }
+.tag-pink { color: #be185d; background: #fce7f3; }
 
 .section-tag.light-tag {
   color: #49e4e3;
@@ -49,16 +55,32 @@
 
 .section-subheading {
   font-size: 1.05rem;
-  color: #64748b;
+  color: #475569;
   margin: 0;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.5;
 }
 
+/* Mobile Swipe Hint Badge */
+.mobile-swipe-hint {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0288d1;
+  background: #e0f2fe;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* 1. Hero Section */
 .franchise-hero-section {
-  background: linear-gradient(135deg, #0d1b2a 0%, #1a237e 60%, #0288d1 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1a237e 50%, #0288d1 100%);
   color: #ffffff;
   padding: 4.5rem 1.5rem 5rem 1.5rem;
   text-align: center;
@@ -72,7 +94,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at top right, rgba(73, 228, 227, 0.15), transparent 60%);
+  background: radial-gradient(circle at top right, rgba(73, 228, 227, 0.2), transparent 60%);
   pointer-events: none;
 }
 
@@ -152,20 +174,19 @@
 
 /* 2. Business Overview Section */
 .overview-section {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
 }
 
 .business-flow-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f8fafc;
+  background: #ffffff;
   border-radius: 20px;
   padding: 2rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1.5px solid #bae6fd;
+  box-shadow: 0 10px 30px rgba(2, 136, 209, 0.08);
   margin-bottom: 1.5rem;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -188,7 +209,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0.8rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .bg-blue { background: #1a237e; }
@@ -205,8 +226,9 @@
 }
 
 .flow-arrow-icon {
-  color: #94a3b8;
+  color: #0288d1;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .independent-card-callout {
@@ -215,12 +237,13 @@
   justify-content: center;
   gap: 0.8rem;
   background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  border: 1.5px solid #86efac;
   padding: 1rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #166534;
   font-weight: 700;
   font-size: 1rem;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.08);
 }
 
 .check-icon {
@@ -229,9 +252,9 @@
   flex-shrink: 0;
 }
 
-/* 3. Why This Platform Grid */
+/* 3. Why This Platform Grid - Mild Color Cards */
 .why-platform-section {
-  background: #f8fafc;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .why-grid {
@@ -241,50 +264,61 @@
 }
 
 .why-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.8rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1.5px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
+.card-mild-blue { background: #eff6ff; border-color: #bfdbfe; }
+.card-mild-purple { background: #f5f3ff; border-color: #ddd6fe; }
+.card-mild-teal { background: #f0fdfa; border-color: #99f6e4; }
+.card-mild-rose { background: #fff1f2; border-color: #fecdd3; }
+.card-mild-amber { background: #fffbeb; border-color: #fde68a; }
+.card-mild-indigo { background: #eef2ff; border-color: #c7d2fe; }
+.card-mild-emerald { background: #ecfdf5; border-color: #a7f3d0; }
+
 .why-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  border-color: #0288d1;
 }
 
 .why-icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(2, 136, 209, 0.1);
-  color: #0288d1;
-  font-size: 1.3rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
 }
 
+.bg-icon-blue { background: #2563eb; }
+.bg-icon-purple { background: #7c3aed; }
+.bg-icon-teal { background: #0d9488; }
+.bg-icon-rose { background: #e11d48; }
+.bg-icon-amber { background: #d97706; }
+
 .why-card h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1a237e;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.6rem 0;
 }
 
 .why-card p {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #475569;
   margin: 0;
   line-height: 1.5;
 }
 
 /* 4. Platform Flow Pipeline */
 .platform-flow-section {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
 }
 
 .pipeline-container {
@@ -293,10 +327,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.8rem;
-  background: #f8fafc;
+  background: #ccfbf1;
   padding: 2rem;
-  border-radius: 20px;
-  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  border: 1.5px solid #99f6e4;
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.08);
 }
 
 .pipeline-chip {
@@ -304,19 +339,19 @@
   align-items: center;
   gap: 0.6rem;
   background: #ffffff;
-  border: 1px solid #cbd5e1;
-  padding: 0.6rem 1rem;
+  border: 1.5px solid #99f6e4;
+  padding: 0.6rem 1.1rem;
   border-radius: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .step-num {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background: #1a237e;
+  background: #0d9488;
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -324,14 +359,15 @@
 }
 
 .step-label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #334155;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #115e59;
 }
 
 .pipeline-arrow {
-  color: #94a3b8;
-  font-size: 0.9rem;
+  color: #0d9488;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 /* 5. Architecture & Hierarchy Grid */
@@ -346,11 +382,9 @@
 }
 
 .arch-card, .hierarchy-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 2rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  padding: 2.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .arch-card h3, .hierarchy-card h3 {
@@ -362,19 +396,20 @@
 
 .arch-sub {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #475569;
   margin-bottom: 1.5rem;
 }
 
 /* Tree Structure */
 .arch-tree {
-  background: #f1f5f9;
-  border-radius: 14px;
+  background: #ffffff;
+  border-radius: 16px;
   padding: 1.5rem;
+  border: 1.5px solid #c7d2fe;
 }
 
 .tree-root {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #1a237e;
   display: flex;
@@ -382,7 +417,7 @@
   gap: 0.6rem;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
-  border-bottom: 2px solid #cbd5e1;
+  border-bottom: 2px solid #e0e7ff;
 }
 
 .tree-branches {
@@ -392,27 +427,27 @@
 }
 
 .tree-branch {
-  background: #ffffff;
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
+  background: #eef2ff;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #334155;
+  color: #312e81;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #c7d2fe;
 }
 
 .branch-dot {
-  color: #0288d1;
+  color: #4338ca;
   font-size: 0.9rem;
 }
 
 .future-branch {
   color: #0288d1;
-  background: rgba(2, 136, 209, 0.08);
-  border-color: rgba(2, 136, 209, 0.2);
+  background: #e0f2fe;
+  border-color: #7dd3fc;
 }
 
 /* Hierarchy Vertical Stack */
@@ -429,10 +464,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #f8fafc;
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
+  background: #ffffff;
+  padding: 0.85rem 1.2rem;
+  border-radius: 14px;
   border-left: 4px solid #1a237e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .role-icon {
@@ -481,14 +517,13 @@
 }
 
 .lang-card {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  padding: 0.8rem 1.4rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 30px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1.5px solid;
 }
 
 .lang-flag {
@@ -497,26 +532,26 @@
 
 .lang-name {
   font-size: 1rem;
-  font-weight: 700;
-  color: #1e293b;
+  font-weight: 800;
+  color: #0f172a;
 }
 
 .status-pill {
   font-size: 0.7rem;
   font-weight: 800;
-  padding: 0.15rem 0.5rem;
-  border-radius: 10px;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
   text-transform: uppercase;
 }
 
 .status-pill.active {
-  background: #dcfce7;
-  color: #15803d;
+  background: #15803d;
+  color: #ffffff;
 }
 
 .status-pill.future {
-  background: #e0f2fe;
-  color: #0369a1;
+  background: #0288d1;
+  color: #ffffff;
 }
 
 /* Features Grid */
@@ -527,47 +562,45 @@
 }
 
 .feature-tile {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 1.4rem;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 
 .feature-tile:hover {
-  background: #ffffff;
   border-color: #0288d1;
-  box-shadow: 0 8px 24px rgba(2, 136, 209, 0.12);
-  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(2, 136, 209, 0.15);
+  transform: translateY(-4px);
 }
 
 .tile-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  background: rgba(26, 35, 126, 0.08);
-  color: #1a237e;
-  font-size: 1.3rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 
 .feature-tile h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.98rem;
+  font-weight: 800;
   color: #1e293b;
   margin: 0;
 }
 
 /* 7. Benefits Section */
 .benefits-section {
-  background: #f8fafc;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .benefits-grid {
@@ -577,12 +610,15 @@
 }
 
 .benefit-card {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid #e2e8f0;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid transparent;
 }
+
+.card-gradient-blue { background: #eff6ff; border-color: #bfdbfe; }
+.card-gradient-cyan { background: #ecfeff; border-color: #a5f3fc; }
+.card-gradient-teal { background: #f0fdf4; border-color: #bbf7d0; }
 
 .benefit-header {
   padding: 1.5rem;
@@ -597,7 +633,7 @@
 }
 
 .benefit-header h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
   margin: 0;
 }
@@ -610,22 +646,23 @@
 
 .benefit-list li {
   font-size: 0.95rem;
-  color: #475569;
+  color: #334155;
   margin-bottom: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
   line-height: 1.4;
+  font-weight: 600;
 }
 
 .benefit-list li svg {
-  color: #22c55e;
+  color: #16a34a;
   flex-shrink: 0;
 }
 
 /* 8. Vision & CTA Section */
 .franchise-vision-section {
-  background: linear-gradient(135deg, #0d1b2a 0%, #1a237e 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1a237e 100%);
   color: #ffffff;
   padding: 4.5rem 1.5rem;
   text-align: center;
@@ -694,7 +731,9 @@
   box-shadow: 0 8px 25px rgba(73, 228, 227, 0.4);
 }
 
-/* Mobile & Tablet Responsiveness (≤ 768px) */
+/* ============================================================
+   MOBILE VIEW HORIZONTAL SWIPE / SCROLL SNAP STYLES (≤ 768px)
+   ============================================================ */
 @media (max-width: 768px) {
   .franchise-main-title {
     font-size: 2rem;
@@ -708,23 +747,153 @@
     font-size: 1.75rem;
   }
 
-  .arch-hierarchy-grid {
-    grid-template-columns: 1fr;
+  /* Show Swipe Hint on Mobile */
+  .mobile-swipe-hint {
+    display: block;
+  }
+
+  /* Business Flow Horizontal Swipe */
+  .business-flow-swipe-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
   }
 
   .business-flow-card {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 
-  .flow-arrow-icon {
-    transform: rotate(90deg);
+  .flow-step-node {
+    scroll-snap-align: center;
+    min-width: 150px;
+  }
+
+  /* Why Grid Horizontal Swipe */
+  .swipeable-grid-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .why-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1rem;
+  }
+
+  .why-card {
+    width: 270px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .why-card-full {
+    width: 270px;
+  }
+
+  /* Pipeline Flow Horizontal Swipe */
+  .pipeline-swipe-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .pipeline-container {
+    flex-wrap: nowrap;
+    width: max-content;
+    justify-content: flex-start;
+    padding: 1.2rem;
+  }
+
+  .pipeline-chip {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Architecture & Hierarchy Grid */
+  .arch-hierarchy-grid {
+    grid-template-columns: 1fr;
   }
 
   .tree-branches {
     grid-template-columns: 1fr;
   }
 
+  /* Languages Swipeable Row */
+  .languages-swipe-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .languages-grid {
+    flex-wrap: nowrap;
+    width: max-content;
+    justify-content: flex-start;
+  }
+
+  .lang-card {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Features Grid Horizontal Swipe */
+  .features-swipe-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .features-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1rem;
+  }
+
+  .feature-tile {
+    width: 200px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Benefits Horizontal Swipe */
+  .benefits-swipe-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .benefits-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1.2rem;
+  }
+
+  .benefit-card {
+    width: 280px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Vision Flow */
   .vision-heading {
     font-size: 1.8rem;
   }

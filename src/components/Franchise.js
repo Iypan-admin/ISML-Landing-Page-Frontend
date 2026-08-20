@@ -17,7 +17,6 @@ import {
   FaPhoneAlt, 
   FaGlobe, 
   FaNetworkWired,
-  FaLayers,
   FaArrowDown
 } from 'react-icons/fa';
 
@@ -36,26 +35,26 @@ const Franchise = () => {
   ];
 
   const coreFeatures = [
-    { title: 'Student Management', icon: <FaUserGraduate /> },
-    { title: 'Teacher Management', icon: <FaChalkboardTeacher /> },
-    { title: 'Course & Batch', icon: <FaBook /> },
-    { title: 'Attendance System', icon: <FaCalendarCheck /> },
-    { title: 'Study Materials', icon: <FaBook /> },
-    { title: 'Online & Offline Exams', icon: <FaCertificate /> },
-    { title: 'Fee Management', icon: <FaMoneyBillWave /> },
-    { title: 'Certificates Engine', icon: <FaCertificate /> },
-    { title: 'Reports & Analytics', icon: <FaChartLine /> },
-    { title: 'AI Ready Integration', icon: <FaRobot /> }
+    { title: 'Student Management', icon: <FaUserGraduate />, bg: '#4285F4' },
+    { title: 'Teacher Management', icon: <FaChalkboardTeacher />, bg: '#EA4335' },
+    { title: 'Course & Batch', icon: <FaBook />, bg: '#FBBC05' },
+    { title: 'Attendance System', icon: <FaCalendarCheck />, bg: '#34A853' },
+    { title: 'Study Materials', icon: <FaBook />, bg: '#8E24AA' },
+    { title: 'Exams & Assessment', icon: <FaCertificate />, bg: '#00ACC1' },
+    { title: 'Fee Management', icon: <FaMoneyBillWave />, bg: '#E91E63' },
+    { title: 'Certificates Engine', icon: <FaCertificate />, bg: '#FF6D00' },
+    { title: 'Reports & Analytics', icon: <FaChartLine />, bg: '#1E88E5' },
+    { title: 'AI Ready Integration', icon: <FaRobot />, bg: '#43A047' }
   ];
 
   const languages = [
-    { name: 'French', flag: '🇫🇷', status: 'Active' },
-    { name: 'German', flag: '🇩🇪', status: 'Active' },
-    { name: 'Japanese', flag: '🇯🇵', status: 'Active' },
-    { name: 'Korean', flag: '🇰🇷', status: 'Active' },
-    { name: 'Spanish', flag: '🇪🇸', status: 'Future' },
-    { name: 'Italian', flag: '🇮🇹', status: 'Future' },
-    { name: 'Mandarin', flag: '🇨🇳', status: 'Future' }
+    { name: 'French', flag: '🇫🇷', status: 'Active', bg: '#eff6ff', border: '#bfdbfe' },
+    { name: 'German', flag: '🇩🇪', status: 'Active', bg: '#fef2f2', border: '#fecaca' },
+    { name: 'Japanese', flag: '🇯🇵', status: 'Active', bg: '#fff7ed', border: '#fed7aa' },
+    { name: 'Korean', flag: '🇰🇷', status: 'Active', bg: '#f0fdf4', border: '#bbf7d0' },
+    { name: 'Spanish', flag: '🇪🇸', status: 'Future', bg: '#faf5ff', border: '#e9d5ff' },
+    { name: 'Italian', flag: '🇮🇹', status: 'Future', bg: '#ecfeff', border: '#a5f3fc' },
+    { name: 'Mandarin', flag: '🇨🇳', status: 'Future', bg: '#fff1f2', border: '#fecdd3' }
   ];
 
   const userHierarchy = [
@@ -116,32 +115,36 @@ const Franchise = () => {
       <section className="franchise-section overview-section">
         <div className="section-container">
           <div className="section-header-box">
-            <span className="section-tag">System Design</span>
+            <span className="section-tag tag-blue">System Design</span>
             <h2 className="section-heading">Business Overview</h2>
             <p className="section-subheading">
               Every centre works independently while Head Office monitors the entire network seamlessly.
             </p>
           </div>
 
-          <div className="business-flow-card">
-            <div className="flow-step-node">
-              <div className="node-icon-box bg-blue"><FaBuilding /></div>
-              <h4>ISML Head Office</h4>
-            </div>
-            <FaArrowRight className="flow-arrow-icon" />
-            <div className="flow-step-node">
-              <div className="node-icon-box bg-cyan"><FaNetworkWired /></div>
-              <h4>Master Franchise</h4>
-            </div>
-            <FaArrowRight className="flow-arrow-icon" />
-            <div className="flow-step-node">
-              <div className="node-icon-box bg-teal"><FaBuilding /></div>
-              <h4>Multiple Centres</h4>
-            </div>
-            <FaArrowRight className="flow-arrow-icon" />
-            <div className="flow-step-node">
-              <div className="node-icon-box bg-orange"><FaUserGraduate /></div>
-              <h4>Teachers + Students + Courses + Fees + Exams</h4>
+          <div className="mobile-swipe-hint">👉 Swipe right to view full flow</div>
+
+          <div className="business-flow-swipe-container">
+            <div className="business-flow-card">
+              <div className="flow-step-node">
+                <div className="node-icon-box bg-blue"><FaBuilding /></div>
+                <h4>ISML Head Office</h4>
+              </div>
+              <FaArrowRight className="flow-arrow-icon" />
+              <div className="flow-step-node">
+                <div className="node-icon-box bg-cyan"><FaNetworkWired /></div>
+                <h4>Master Franchise</h4>
+              </div>
+              <FaArrowRight className="flow-arrow-icon" />
+              <div className="flow-step-node">
+                <div className="node-icon-box bg-teal"><FaBuilding /></div>
+                <h4>Multiple Centres</h4>
+              </div>
+              <FaArrowRight className="flow-arrow-icon" />
+              <div className="flow-step-node">
+                <div className="node-icon-box bg-orange"><FaUserGraduate /></div>
+                <h4>Teachers + Students + Courses + Fees + Exams</h4>
+              </div>
             </div>
           </div>
 
@@ -156,37 +159,42 @@ const Franchise = () => {
       <section className="franchise-section why-platform-section">
         <div className="section-container">
           <div className="section-header-box">
-            <span className="section-tag">Key Advantages</span>
+            <span className="section-tag tag-purple">Key Advantages</span>
             <h2 className="section-heading">Why This Platform</h2>
           </div>
 
-          <div className="why-grid">
-            <div className="why-card">
-              <div className="why-icon-wrapper"><FaGlobe /></div>
-              <h3>One Platform for All Centres</h3>
-              <p>Unify all your language centres under one central software ecosystem.</p>
-            </div>
-            <div className="why-card">
-              <div className="why-icon-wrapper"><FaUserShield /></div>
-              <h3>Independent Data Security</h3>
-              <p>Isolated data storage for every centre with role-based access control.</p>
-            </div>
-            <div className="why-card">
-              <div className="why-icon-wrapper"><FaChartLine /></div>
-              <h3>Real-Time Live Monitoring</h3>
-              <p>Track student enrollments, teacher schedules, and revenue live.</p>
-            </div>
-            <div className="why-card">
-              <div className="why-icon-wrapper"><FaCertificate /></div>
-              <h3>Centralized Analytics</h3>
-              <p>Instant consolidated financial and academic reports across all branches.</p>
-            </div>
-            <div className="why-card why-card-full">
-              <div className="why-icon-wrapper"><FaMoneyBillWave /></div>
-              <h3>Faster Operations & Exams</h3>
-              <p>Accelerate admissions, automated fee collection, and digital examinations.</p>
+          <div className="mobile-swipe-hint">👉 Swipe right for features</div>
+
+          <div className="swipeable-grid-wrapper">
+            <div className="why-grid">
+              <div className="why-card card-mild-blue">
+                <div className="why-icon-wrapper bg-icon-blue"><FaGlobe /></div>
+                <h3>One Platform for All Centres</h3>
+                <p>Unify all your language centres under one central software ecosystem.</p>
+              </div>
+              <div className="why-card card-mild-purple">
+                <div className="why-icon-wrapper bg-icon-purple"><FaUserShield /></div>
+                <h3>Independent Data Security</h3>
+                <p>Isolated data storage for every centre with role-based access control.</p>
+              </div>
+              <div className="why-card card-mild-teal">
+                <div className="why-icon-wrapper bg-icon-teal"><FaChartLine /></div>
+                <h3>Real-Time Live Monitoring</h3>
+                <p>Track student enrollments, teacher schedules, and revenue live.</p>
+              </div>
+              <div className="why-card card-mild-rose">
+                <div className="why-icon-wrapper bg-icon-rose"><FaCertificate /></div>
+                <h3>Centralized Analytics</h3>
+                <p>Instant consolidated financial and academic reports across all branches.</p>
+              </div>
+              <div className="why-card card-mild-amber why-card-full">
+                <div className="why-icon-wrapper bg-icon-amber"><FaMoneyBillWave /></div>
+                <h3>Faster Operations & Exams</h3>
+                <p>Accelerate admissions, automated fee collection, and digital examinations.</p>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -194,23 +202,27 @@ const Franchise = () => {
       <section className="franchise-section platform-flow-section">
         <div className="section-container">
           <div className="section-header-box">
-            <span className="section-tag">Student Journey</span>
+            <span className="section-tag tag-teal">Student Journey</span>
             <h2 className="section-heading">End-to-End Platform Flow</h2>
             <p className="section-subheading">Complete lifecycle from initial inquiry to final course certification</p>
           </div>
 
-          <div className="pipeline-container">
-            {platformFlow.map((step, idx) => (
-              <React.Fragment key={idx}>
-                <div className="pipeline-chip">
-                  <span className="step-num">{idx + 1}</span>
-                  <span className="step-label">{step}</span>
-                </div>
-                {idx < platformFlow.length - 1 && (
-                  <FaArrowRight className="pipeline-arrow" />
-                )}
-              </React.Fragment>
-            ))}
+          <div className="mobile-swipe-hint">👉 Swipe right to see full lifecycle</div>
+
+          <div className="pipeline-swipe-wrapper">
+            <div className="pipeline-container">
+              {platformFlow.map((step, idx) => (
+                <React.Fragment key={idx}>
+                  <div className="pipeline-chip">
+                    <span className="step-num">{idx + 1}</span>
+                    <span className="step-label">{step}</span>
+                  </div>
+                  {idx < platformFlow.length - 1 && (
+                    <FaArrowRight className="pipeline-arrow" />
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -221,8 +233,8 @@ const Franchise = () => {
           <div className="arch-hierarchy-grid">
             
             {/* Architecture Card */}
-            <div className="arch-card">
-              <span className="section-tag">Network Design</span>
+            <div className="arch-card card-mild-indigo">
+              <span className="section-tag tag-indigo">Network Design</span>
               <h3>Platform Architecture</h3>
               <p className="arch-sub">Each centre manages its own students, teachers, fees and exams.</p>
               
@@ -240,8 +252,8 @@ const Franchise = () => {
             </div>
 
             {/* User Hierarchy Card */}
-            <div className="hierarchy-card">
-              <span className="section-tag">Role Management</span>
+            <div className="hierarchy-card card-mild-emerald">
+              <span className="section-tag tag-emerald">Role Management</span>
               <h3>User Hierarchy</h3>
               <div className="hierarchy-list">
                 {userHierarchy.map((item, idx) => (
@@ -274,33 +286,49 @@ const Franchise = () => {
           {/* Languages Supported */}
           <div className="languages-block">
             <div className="section-header-box">
-              <span className="section-tag">Global Offerings</span>
+              <span className="section-tag tag-orange">Global Offerings</span>
               <h2 className="section-heading">Supported Languages</h2>
             </div>
-            <div className="languages-grid">
-              {languages.map((lang, idx) => (
-                <div key={idx} className={`lang-card ${lang.status.toLowerCase()}`}>
-                  <span className="lang-flag">{lang.flag}</span>
-                  <span className="lang-name">{lang.name}</span>
-                  <span className={`status-pill ${lang.status.toLowerCase()}`}>{lang.status}</span>
-                </div>
-              ))}
+            
+            <div className="mobile-swipe-hint">👉 Swipe right for languages</div>
+            
+            <div className="languages-swipe-wrapper">
+              <div className="languages-grid">
+                {languages.map((lang, idx) => (
+                  <div 
+                    key={idx} 
+                    className="lang-card"
+                    style={{ backgroundColor: lang.bg, borderColor: lang.border }}
+                  >
+                    <span className="lang-flag">{lang.flag}</span>
+                    <span className="lang-name">{lang.name}</span>
+                    <span className={`status-pill ${lang.status.toLowerCase()}`}>{lang.status}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Core Features Grid */}
           <div className="core-features-block">
             <div className="section-header-box">
-              <span className="section-tag">Capabilities</span>
+              <span className="section-tag tag-pink">Capabilities</span>
               <h2 className="section-heading">Core System Features</h2>
             </div>
-            <div className="features-grid">
-              {coreFeatures.map((feat, idx) => (
-                <div key={idx} className="feature-tile">
-                  <div className="tile-icon">{feat.icon}</div>
-                  <h4>{feat.title}</h4>
-                </div>
-              ))}
+
+            <div className="mobile-swipe-hint">👉 Swipe right for all features</div>
+
+            <div className="features-swipe-wrapper">
+              <div className="features-grid">
+                {coreFeatures.map((feat, idx) => (
+                  <div key={idx} className="feature-tile">
+                    <div className="tile-icon" style={{ backgroundColor: `${feat.bg}15`, color: feat.bg }}>
+                      {feat.icon}
+                    </div>
+                    <h4>{feat.title}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -311,47 +339,52 @@ const Franchise = () => {
       <section className="franchise-section benefits-section">
         <div className="section-container">
           <div className="section-header-box">
-            <span className="section-tag">Value Proposition</span>
+            <span className="section-tag tag-blue">Value Proposition</span>
             <h2 className="section-heading">Benefits for Everyone</h2>
           </div>
 
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <div className="benefit-header bg-navy">
-                <FaBuilding className="benefit-icon" />
-                <h3>Head Office</h3>
-              </div>
-              <ul className="benefit-list">
-                <li><FaCheckCircle /> Live network monitoring</li>
-                <li><FaCheckCircle /> Consolidated financial & academic reports</li>
-                <li><FaCheckCircle /> Multi-centre franchise management</li>
-              </ul>
-            </div>
+          <div className="mobile-swipe-hint">👉 Swipe right for benefit cards</div>
 
-            <div className="benefit-card">
-              <div className="benefit-header bg-cyan">
-                <FaNetworkWired className="benefit-icon" />
-                <h3>Franchise Centre</h3>
+          <div className="benefits-swipe-wrapper">
+            <div className="benefits-grid">
+              <div className="benefit-card card-gradient-blue">
+                <div className="benefit-header bg-navy">
+                  <FaBuilding className="benefit-icon" />
+                  <h3>Head Office</h3>
+                </div>
+                <ul className="benefit-list">
+                  <li><FaCheckCircle /> Live network monitoring</li>
+                  <li><FaCheckCircle /> Consolidated financial & academic reports</li>
+                  <li><FaCheckCircle /> Multi-centre franchise management</li>
+                </ul>
               </div>
-              <ul className="benefit-list">
-                <li><FaCheckCircle /> Complete daily operations in one system</li>
-                <li><FaCheckCircle /> Automated fee collections & reminders</li>
-                <li><FaCheckCircle /> Efficient teacher & batch scheduling</li>
-              </ul>
-            </div>
 
-            <div className="benefit-card">
-              <div className="benefit-header bg-teal">
-                <FaUserGraduate className="benefit-icon" />
-                <h3>Students</h3>
+              <div className="benefit-card card-gradient-cyan">
+                <div className="benefit-header bg-cyan">
+                  <FaNetworkWired className="benefit-icon" />
+                  <h3>Franchise Centre</h3>
+                </div>
+                <ul className="benefit-list">
+                  <li><FaCheckCircle /> Complete daily operations in one system</li>
+                  <li><FaCheckCircle /> Automated fee collections & reminders</li>
+                  <li><FaCheckCircle /> Efficient teacher & batch scheduling</li>
+                </ul>
               </div>
-              <ul className="benefit-list">
-                <li><FaCheckCircle /> Superior interactive learning experience</li>
-                <li><FaCheckCircle /> Digital academic records & certificates</li>
-                <li><FaCheckCircle /> Easy access to study materials & exams</li>
-              </ul>
+
+              <div className="benefit-card card-gradient-teal">
+                <div className="benefit-header bg-teal">
+                  <FaUserGraduate className="benefit-icon" />
+                  <h3>Students</h3>
+                </div>
+                <ul className="benefit-list">
+                  <li><FaCheckCircle /> Superior interactive learning experience</li>
+                  <li><FaCheckCircle /> Digital academic records & certificates</li>
+                  <li><FaCheckCircle /> Easy access to study materials & exams</li>
+                </ul>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 
